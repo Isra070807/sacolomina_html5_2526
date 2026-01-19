@@ -43,17 +43,8 @@
     display: none; /* Mobile First: oculto por defecto */
 }
 
-/* Hamburguesa */
-.hamburger {
-    position: relative;
-    z-index: 1002;
-    display: block;
-    font-size: 2rem;
-    cursor: pointer;
-}
-
-.menu-toggle {
-    display: none;
+.menu-toggle :hover {
+    display:none;
 }
 
 /* Navegación Móvil (Menú desplegable) */
