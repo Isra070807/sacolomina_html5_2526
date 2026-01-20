@@ -5,7 +5,7 @@
   --color-secundario: #3b82f6;
   --color-acento: #007d3f;
   --color-fondo: #f3f4f6;
-  --color-blanco: #007d3f;
+  --color-blanco: #ffffff; /* Corregido: antes era verde */
   --color-gris: #9ca3af;
   --color-error: #ef4444;
   --color-exito: #10b981;
@@ -21,7 +21,6 @@ html {
   width: 100%;
   min-height: 100vh;
   background-color: var(--color-principal);
-
 }
 
 a:link, a:visited {
@@ -33,7 +32,7 @@ li {
   list-style-type: none;
 }
 
-/* --- 2. Configuración del Contenedor (Grid) para movil --- */
+/* --- 2. Configuración del Contenedor (Grid) --- */
 body {
   display: grid;
   width: 100%;
@@ -47,36 +46,20 @@ body {
       "footer";
 }
 
-/* Asignación de áreas */
-header { grid-area: header; min-height: 80px; }
+header { grid-area: header; min-height: 80px; z-index: 2000; }
 main   { grid-area: main;   min-height: 300px; background: var(--color-fondo); }
 aside  { grid-area: aside;  min-height: 150px; background: var(--color-gris); }
 footer { grid-area: footer; min-height: 60px; background: var(--color-acento); }
 
-
-
 /* --- 3. Media Queries de Estructura --- */
-@media only screen and (min-width: 600px) {
+/* Mantenemos el aside lateral solo en pantallas grandes */
+@media only screen and (min-width: 1024px) {
   body {
-    grid-template-columns: 200px 1fr;
+    grid-template-columns: 280px 1fr;
     grid-template-rows: auto 1fr auto;
     grid-template-areas: 
         "header header"
         "aside main"
         "footer footer";
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  body { 
-    grid-template-columns: 250px 1fr;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  body {
-    grid-template-columns: 280px 1fr;
-    max-width: 2400px;
-    margin: 0 auto;
   }
 }
