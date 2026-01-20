@@ -1,6 +1,16 @@
 footer {
     text-align: center;
-    padding: 1rem;
-    font-family: Roboto Mono;
-    font-weight: 150;
+    padding: 2rem 1rem;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 400;
+    color: var(--color-blanco);
+}
+
+footer nav a {
+    margin: 0 10px;
+    font-size: 0.9rem;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
 }
