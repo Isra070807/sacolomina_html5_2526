@@ -1,17 +1,52 @@
+:root {
+    --color-blanco: #ffffff;
+    --color-acento: #1e318c;
+}
+
 footer {
+    grid-area: footer;
     text-align: center;
     padding: 2rem 1rem;
     font-family: 'Roboto Mono', monospace;
-    font-weight: 400;
     color: var(--color-blanco);
+    background: var(--color-acento);
+    margin-top: auto;
+}
+
+footer p {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+footer nav {
+    margin-top: 1rem;
 }
 
 footer nav a {
     margin: 0 10px;
     font-size: 0.9rem;
-    color: wheat;
+    color: #f5deb3;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 footer nav a:hover {
+    color: #ffffff;
     text-decoration: underline;
+}
+
+/* Responsive footer */
+@media (max-width: 768px) {
+    footer {
+        padding: 1.5rem 1rem;
+    }
+    
+    footer p {
+        font-size: 0.9rem;
+    }
+    
+    footer nav a {
+        display: block;
+        margin: 5px 0;
+    }
 }
