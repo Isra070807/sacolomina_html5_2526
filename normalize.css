@@ -1,13 +1,10 @@
 /* --- 1. Variables y Reset --- */
 :root {
-  --color-principal: #1f2937;
+  --color-principal: #090f2e; /* Azul oscuro original */
   --color-secundario: #3b82f6;
   --color-acento: #1e318c;
   --color-fondo: #f3f4f6;
   --color-blanco: #ffffff;
-  --color-gris: #c7a7ec;
-  --color-error: #ef4444;
-  --color-exito: #10b981;
 }
 
 *, *::before, *::after {
@@ -19,44 +16,36 @@
 html {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--color-principal);
 }
 
-/* --- 2. Configuración del Contenedor (Grid) --- */
+/* --- 2. Estructura Grid y Fondo Espacial --- */
 body {
   display: grid;
   width: 100%;
   min-height: 100vh;
   grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr auto; /* Quitamos una fila auto */
+  grid-template-rows: auto 1fr auto;
   grid-template-areas: 
       "header"
       "main"
       "footer";
+  /* Fondo original de estrellas */
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: var(--color-principal);
 }
 
-header { grid-area: header; min-height: 80px; z-index: 2000; }
+header { grid-area: header; }
+main   { grid-area: main; }
+footer { grid-area: footer; }
 
-main {
-    grid-area: main;
-    min-height: 400px;
-    background-image: url('https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
-footer { grid-area: footer; min-height: 60px; background: var(--color-acento); }
-
-/* --- 3. Media Queries de Estructura --- */
-@media only screen and (min-width: 1024px) {
-  body {
-    /* Ahora solo hay una columna de 1fr (todo el ancho) */
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-        "header"
-        "main"
-        "footer";
-  }
+li {
+  list-style-type: none;
 }
