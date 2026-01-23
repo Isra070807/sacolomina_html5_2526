@@ -1,7 +1,7 @@
 .header {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
     background-color: #090f2e; /* Azul oscuro original */
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     padding: 1rem 0;
@@ -18,7 +18,7 @@
     padding: 0 20px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: right;
 }
 
 .logo {
