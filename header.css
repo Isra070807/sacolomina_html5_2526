@@ -1,8 +1,6 @@
 .header {
     display: flex;
-    justify-content: right;
-    align-items: right;
-    background-color: #090f2e; /* Azul oscuro original */
+    background-color: #090f2e; 
     box-shadow: 0 2px 10px rgba(0,0,0,0.3);
     padding: 1rem 0;
     position: sticky;
@@ -17,8 +15,8 @@
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
-    align-items: right;
+    justify-content: space-between; /* Empuja logo a la izquierda y nav a la derecha */
+    align-items: center; /* Centra verticalmente los elementos */
 }
 
 .logo {
@@ -63,30 +61,58 @@
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    gap: 15px; 
 }
 
 .nav-list a {
     color: #ffffff;
     font-size: 1.2rem;
-    padding: 15px;
-    width: 100%;
-    text-align: center;
+    padding: 10px; /* Espaciado interno del clic */
+    display: flex; /* Para alinear icono y texto */
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Separa el icono del texto */
 }
 
 .menu-toggle:checked ~ .nav { height: 260px; }
 
 /* Desktop */
 @media (min-width: 768px) {
-    .hamburger { display: none; }
-    .container .logo span { display: inline; }
+    .hamburger { 
+        display: none; 
+    }
+
+    /* Forzamos al contenedor a empujar los elementos a los extremos */
+    .container {
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+
     .nav {
         position: static;
         height: auto !important;
         background-color: transparent;
+        display: block; /* Volvemos a block para que el ancho sea automático */
+        margin-left: 0; /* Limpiamos cualquier margen previo */
     }
+
     .nav-list {
-        flex-direction: row;
-        gap: 25px;
+        display: flex;
+        flex-direction: row; /* Ponemos los items en fila */
+        gap: 30px; /* Espaciado entre botones */
         padding: 0;
+        margin: 0;
+        justify-content: flex-end; /* Asegura que la lista se alinee al final */
+    }
+
+    .nav-list a {
+        font-size: 1rem;
+        padding: 5px 10px;
+        white-space: nowrap; /* Evita que el texto se parta */
+    }
+
+    .nav-list :hover {
+        color:#3b82f6;
     }
 }
