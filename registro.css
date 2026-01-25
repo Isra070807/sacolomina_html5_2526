@@ -18,6 +18,8 @@ form  {
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     width: 33%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 input {
