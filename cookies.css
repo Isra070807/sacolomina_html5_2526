@@ -36,9 +36,4 @@ h2 {
     padding: 15px 30px;
     border-radius: 24px;
     text-align: center;
-    transition: transform 0.2s;
-}
-
-.btn-volver:hover {
-    transform: scale(1.05);
 }

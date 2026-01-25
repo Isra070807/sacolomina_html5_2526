@@ -12,12 +12,14 @@ form  {
     justify-content: center;
     border: 1px solid black;
     padding: 30px;
-    background-color: rgb(49, 49, 49);
+    background-color: rgba(49, 49, 49, 0.9);
     border-radius: 25px;
     width: fit-content;
     align-items: center;
     font-family: 'Times New Roman', Times, serif;
     width: 33%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 input {
@@ -42,6 +44,6 @@ label {
 
 @media (max-width: 768px) {
     form {
-        width: 66%;
+        width: 75%;
     }
 }
