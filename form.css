@@ -43,3 +43,11 @@ label {
     text-align: left;
     font-size: 32px;
 }
+a {
+    color: blue;
+}
+@media (max-width: 768px) {
+    form {
+        width: 66%;
+    }
+}
