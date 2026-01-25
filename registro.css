@@ -27,19 +27,40 @@ input {
     height: 32px;
 }
 input[type="submit"] {
+    display: block;
     background-color: fuchsia;
     border-radius: 24px;
-    width: 100%;
+    width: 50%;
     height: 64px;
 }
-
+input[type="checkbox"] {
+    width: 100%;
+    height: 32px;
+}
 label {
     display: block;
     width: 100%;
     text-align: left;
     font-size: 32px;
 }
-
+.botones-container {
+    display: flex;       /* Los pone en la misma línea */
+    flex-direction: row; /* Asegura que sea fila y no columna */
+    gap: 20px;           /* Espacio entre los dos botones */
+    width: 100%;         /* Que ocupen el ancho del formulario */
+    justify-content: center;
+}
+.btn-enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: fuchsia;
+    border-radius: 24px;
+    width: 50%;            /* Igual que tu submit */
+    height: 64px;          
+    font-size: 14px;
+    text-align: center;
+}
 @media (max-width: 768px) {
     form {
         width: 66%;

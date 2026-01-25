@@ -1,0 +1,44 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    min-height: 80vh;
+}
+
+.cookies-container {
+    background-color: rgba(49, 49, 49, 0.9); /* Similar a tu dimgray pero con transparencia */
+    color: white;
+    padding: 40px;
+    border-radius: 25px;
+    border: 1px solid black;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    font-family: 'Times New Roman', Times, serif; /* Siguiendo tu estilo actual */
+}
+
+h1 {
+    color: fuchsia; /* Usando tu color de acento para el título */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: gray; /* Color de tus inputs para resaltar subtítulos */
+    margin-top: 25px;
+}
+
+
+/* Botón volver estilo SaluFANS */
+.btn-volver {
+    display: block;
+    margin-top: 30px;
+    background-color: fuchsia;
+    padding: 15px 30px;
+    border-radius: 24px;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.btn-volver:hover {
+    transform: scale(1.05);
+}
