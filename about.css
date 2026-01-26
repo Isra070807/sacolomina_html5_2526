@@ -52,3 +52,28 @@
     color: #22c55e; /* Verde para el toque del dinero */
     font-weight: bold;
 }
+.about-image-container {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordes suaves */
+    border: 3px solid #3b82f6; /* Borde azul a juego con el logo */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Sombra para que flote */
+    transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.02); /* Efecto zoom muy ligero al pasar el ratón */
+}
+
+.img-caption {
+    font-size: 0.9rem;
+    color: #3b82f6;
+    margin-top: 10px;
+    font-style: italic;
+    opacity: 0.8;
+}
