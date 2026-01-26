@@ -3,68 +3,100 @@ main {
     justify-content: center;  
     align-items: center;          
     width: 100%;
+    min-height: 80vh; /* Asegura que se centre verticalmente en la pantalla */
 }
 
-form  {
+form {
     display: flex;
     flex-direction: column;
-    gap: 45px;
-    justify-content: center;
+    gap: 20px; /* Reducido para que no sea eterno el scroll */
     border: 1px solid black;
-    padding: 30px;
+    padding: 40px;
     background-color: rgba(49, 49, 49, 0.9);
     border-radius: 25px;
-    width: fit-content;
-    align-items: center;
-    font-family: 'Times New Roman', Times, serif;
     width: 33%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    min-width: 320px; /* Evita que se encoja demasiado */
+    margin: 5% 0;
+    color: white; /* Para que el texto se lea sobre el fondo oscuro */
+    font-family: 'Roboto Mono', monospace;
 }
 
-input {
+h2 { text-align: center; margin-bottom: 10px; }
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 18px; /* Reducido de 32px por legibilidad */
+    margin-bottom: 8px;
+}
+
+input[type="email"], 
+input[type="password"] {
     background-color: beige;
     border-radius: 12px;
-    width: 75%;
-    height: 32px;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    box-sizing: border-box; /* Importante para que el padding no sume al ancho */
 }
-input[type="submit"] {
-    display: block;
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.botones-container {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+input[type="submit"], .btn-enlace {
+    flex: 1; /* Hace que ambos midan lo mismo */
     background-color: fuchsia;
     border-radius: 24px;
-    width: 50%;
-    height: 64px;
-}
-input[type="checkbox"] {
-    width: 100%;
-    height: 32px;
-}
-label {
-    display: block;
-    width: 100%;
-    text-align: left;
-    font-size: 32px;
-}
-.botones-container {
-    display: flex;       /* Los pone en la misma línea */
-    flex-direction: row; /* Asegura que sea fila y no columna */
-    gap: 20px;           /* Espacio entre los dos botones */
-    width: 100%;         /* Que ocupen el ancho del formulario */
-    justify-content: center;
-}
-.btn-enlace {
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: fuchsia;
-    border-radius: 24px;
-    width: 50%;            /* Igual que tu submit */
-    height: 64px;          
     font-size: 14px;
-    text-align: center;
+    transition: 0.3s;
 }
+
+input[type="submit"]:hover, .btn-enlace:hover {
+    background-color: #ff00ff;
+    transform: scale(1.02);
+}
+
 @media (max-width: 768px) {
     form {
-        width: 75%;
+        width: 85%;
+    }
+    .botones-container {
+        flex-direction: column;
     }
 }
